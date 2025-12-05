@@ -34,40 +34,34 @@ export default function Summary() {
           <div className="grid md:grid-cols-2 gap-12">
             <div className="space-y-6">
               <p className="text-lg text-foreground/80 leading-relaxed">
-                I'm Wade Turner, a fourth-year student at CU Boulder studying Data Science. My journey spans building
-                multiple businesses—from a clothing brand to system integration contracting—but my true passion lies in
-                business development and strategic growth.
+                My name is Wade Turner, and I'm a fourth-year student at CU Boulder studying Data Science. My journey in entrepreneurship and business development spans building multiple start-ups, from a clothing brand to system integration contracting.
               </p>
 
               <p className="text-lg text-foreground/80 leading-relaxed">
-                At Arterial, my co-founder and I built an AI-powered platform that helps cities detect and prioritize
-                roadway issues. In our first year, we secured paid pilots with major cities, expanded to 30+
-                municipalities in our pipeline, and grew from bootstrap to a $10M valuation.
+                My current focus is Arterial. We use AI-powered dash cameras to automate the inventory and prioritization of roadway hazards like potholes, helping teams fix up to 15% more potholes with the same budget.
               </p>
             </div>
 
             <div className="space-y-4">
-              <div className="p-6 rounded-lg border border-border/30 bg-card/50 hover:bg-card/80 transition-colors">
-                <h3 className="font-semibold text-cyan-500 mb-2">What I do</h3>
+              <div className="p-6 rounded-lg border border-border/60 bg-card/50 hover:bg-card/80 hover:border-red-400/30 hover:shadow-lg hover:shadow-red-400/10 transition-all duration-300">
+                <h3 className="font-semibold text-red-400 mb-2">What I do</h3>
                 <p className="text-foreground/70 text-sm">
                   B2G sales, strategic partnerships, revenue cycle management, and scaling operations from zero to
                   market.
                 </p>
               </div>
 
-              <div className="p-6 rounded-lg border border-border/30 bg-card/50 hover:bg-card/80 transition-colors">
-                <h3 className="font-semibold text-blue-500 mb-2">What I love</h3>
+              <div className="p-6 rounded-lg border border-border/60 bg-card/50 hover:bg-card/80 hover:border-red-400/30 hover:shadow-lg hover:shadow-red-400/10 transition-all duration-300">
+                <h3 className="font-semibold text-red-400 mb-2">What I love</h3>
                 <p className="text-foreground/70 text-sm">
-                  Cars, design, building systems that work, cats, nature, and the intersection of creativity and
-                  strategy.
+                  Cars
                 </p>
               </div>
 
-              <div className="p-6 rounded-lg border border-border/30 bg-card/50 hover:bg-card/80 transition-colors">
-                <h3 className="font-semibold text-violet-500 mb-2">Current focus</h3>
+              <div className="p-6 rounded-lg border border-border/60 bg-card/50 hover:bg-card/80 hover:border-red-400/30 hover:shadow-lg hover:shadow-red-400/10 transition-all duration-300">
+                <h3 className="font-semibold text-red-400 mb-2">Current focus</h3>
                 <p className="text-foreground/70 text-sm">
-                  Navigating Arterial toward product-market fit, consulting on smart city initiatives, and advising on
-                  organizational growth.
+                  Scaling Arterial, consulting on smart city initiatives, and advising on organizational growth.
                 </p>
               </div>
             </div>

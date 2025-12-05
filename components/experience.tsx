@@ -4,7 +4,7 @@ import { useState, useEffect, useRef } from "react"
 
 const experiences = [
   {
-    title: "Principal | Co-Founder",
+    title: "CRO | Co-Founder",
     company: "Arterial",
     period: "Oct 2024 - Present",
     highlights: [
@@ -18,9 +18,9 @@ const experiences = [
     ],
   },
   {
-    title: "Principal | Co-Founder",
+    title: "CEO | Co-Founder",
     company: "Grafted (Sold)",
-    period: "2022 - 2024",
+    period: "Jul 2023 - Nov 2024",
     highlights: [
       "Built and scaled sustainable clothing company from concept to acquisition",
       "Developed go-to-market strategy and brand positioning",
@@ -29,14 +29,10 @@ const experiences = [
     ],
   },
   {
-    title: "Principal",
-    company: "Grafted",
-    period: "Oct 2024 - Present",
-    highlights: [
-      "Strategic advisor for growth-stage ventures",
-      "Focus on business development and market expansion",
-      "Support partnerships and ecosystem growth initiatives",
-    ],
+    title: "Consultant",
+    company: "14FourTech (Absorbed)",
+    period: "Aug 2023 - Oct 2025",
+    highlights: ["Headed Business Development and Client Relations", "Managed client partnerships and pipeline growth"],
   },
   {
     title: "Business Development Consultant",
@@ -57,12 +53,6 @@ const experiences = [
       "Facilitated first strategic partnership to scale services",
       "Developed repeatable processes for client acquisition and partnership management",
     ],
-  },
-  {
-    title: "Consultant",
-    company: "14FourTech",
-    period: "Aug 2023 - Oct 2025",
-    highlights: ["Headed Business Development and Client Relations", "Managed client partnerships and pipeline growth"],
   },
 ]
 
@@ -103,24 +93,38 @@ export default function Experience() {
                 onClick={() => setExpandedIndex(expandedIndex === index ? -1 : index)}
                 className={`w-full text-left p-6 rounded-lg border transition-all duration-300 ${
                   expandedIndex === index
-                    ? "border-cyan-500/50 bg-card/80 shadow-lg shadow-cyan-500/10"
-                    : "border-border/30 bg-card/50 hover:bg-card/80"
+                    ? "border-red-400/50 bg-card/80 shadow-lg shadow-red-400/10"
+                    : "border-border/60 bg-card/50 hover:bg-card/80 hover:border-red-400/30 hover:shadow-lg hover:shadow-red-400/10"
                 }`}
               >
                 <div className="flex items-start justify-between">
                   <div>
                     <h3 className="text-lg font-semibold">{exp.title}</h3>
-                    <p className="text-sm text-muted-foreground mt-1">{exp.company}</p>
+                    <p className="text-sm text-muted-foreground mt-1">
+                      {exp.company.includes("(Sold)") ? (
+                        <>
+                          {exp.company.replace(" (Sold)", "")}{" "}
+                          <span className="text-green-500">(Sold)</span>
+                        </>
+                      ) : exp.company.includes("(Absorbed)") ? (
+                        <>
+                          {exp.company.replace(" (Absorbed)", "")}{" "}
+                          <span className="text-green-500">(Absorbed)</span>
+                        </>
+                      ) : (
+                        exp.company
+                      )}
+                    </p>
                     <p className="text-xs text-muted-foreground/60 mt-2">{exp.period}</p>
                   </div>
-                  <div className="text-cyan-500 text-xl">{expandedIndex === index ? "−" : "+"}</div>
+                  <div className="text-red-400 text-xl">{expandedIndex === index ? "−" : "+"}</div>
                 </div>
 
                 {expandedIndex === index && (
                   <div className="mt-6 pt-6 border-t border-border/30 space-y-3 animate-in fade-in slide-in-from-top-2">
                     {exp.highlights.map((highlight, i) => (
                       <div key={i} className="flex gap-3">
-                        <div className="w-1.5 h-1.5 rounded-full bg-gradient-to-r from-cyan-500 to-blue-500 mt-2 flex-shrink-0" />
+                        <div className="w-1.5 h-1.5 rounded-full bg-gradient-to-r from-red-400 to-red-500 mt-2 flex-shrink-0" />
                         <p className="text-sm text-foreground/80">{highlight}</p>
                       </div>
                     ))}

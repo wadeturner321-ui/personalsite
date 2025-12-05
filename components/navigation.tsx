@@ -25,7 +25,7 @@ export default function Navigation({ scrollProgress }: NavigationProps) {
       </div>
       {/* Progress bar */}
       <div
-        className="absolute bottom-0 left-0 h-0.5 bg-gradient-to-r from-cyan-500 via-blue-500 to-violet-500 transition-all duration-300"
+        className="absolute bottom-0 left-0 h-0.5 bg-gradient-to-r from-red-400 via-red-500 to-red-400 transition-all duration-300"
         style={{ width: `${scrollProgress * 100}%` }}
       />
     </nav>

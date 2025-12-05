@@ -24,7 +24,28 @@ export default function Home() {
   }, [])
 
   return (
-    <main className="bg-background text-foreground">
+    <main 
+      className="bg-background text-foreground"
+      style={{
+        backgroundImage: `
+          repeating-linear-gradient(
+            45deg,
+            transparent,
+            transparent 20px,
+            oklch(0.5 0.08 15 / 0.08) 20px,
+            oklch(0.5 0.08 15 / 0.08) 21px
+          ),
+          repeating-linear-gradient(
+            -45deg,
+            transparent,
+            transparent 20px,
+            oklch(0.5 0.08 15 / 0.08) 20px,
+            oklch(0.5 0.08 15 / 0.08) 21px
+          )
+        `,
+        backgroundSize: '100% 100%',
+      }}
+    >
       <Navigation scrollProgress={scrollProgress} />
       <Hero />
       <Summary />

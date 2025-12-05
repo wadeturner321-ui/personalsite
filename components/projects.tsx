@@ -7,17 +7,17 @@ const projects = [
     title: "Arterial",
     subtitle: "AI-Powered Municipal Infrastructure Platform",
     description:
-      "Co-founded Arterial to automate road hazard detection for cities. Built AI-powered dash cameras that identify, map, and prioritize roadway issues. Led B2G sales, partnerships, and operations to achieve $10M valuation.",
-    achievements: ["$10M Valuation", "30+ Cities", "Paid Pilots", "Strategic Partnerships"],
-    color: "from-cyan-500/20 to-blue-500/20",
+      "Co-founded Arterial to automate road hazard detection for cities. Built AI-powered dash cameras that identify, map, and prioritize roadway issues. Led B2G sales, partnerships, and operations to achieve 30+ cities in pipeline within a year of founding.",
+    achievements: ["6 Pending IP", "30+ Cities", "Paid Pilots", "Strategic Partnerships"],
+    color: "from-red-400/20 to-red-500/20",
   },
   {
     title: "Grafted",
     subtitle: "Direct-to-Consumer Clothing Brand",
     description:
-      "Founded and scaled a clothing brand from concept to market. Managed design, production, and direct sales. Sold the business while focusing on Arterial.",
+      "Co-founded and scaled a clothing brand from concept to market. Managed design, production, and direct sales. Sold the business to Dean Withers to focus on Arterial.",
     achievements: ["Product Design", "Operations", "Direct Sales", "Brand Building"],
-    color: "from-violet-500/20 to-purple-500/20",
+    color: "from-red-400/20 to-red-500/20",
   },
   {
     title: "Digital Legacy Clinic",
@@ -25,7 +25,7 @@ const projects = [
     description:
       "Led business development efforts for a non-profit clinic. Facilitated the organization's first strategic partnership, enabling scaled service delivery. Created repeatable processes for partnership management.",
     achievements: ["Partnership Facilitation", "Process Design", "Client Scaling", "Operations"],
-    color: "from-emerald-500/20 to-teal-500/20",
+    color: "from-red-400/20 to-red-500/20",
   },
 ]
 
@@ -56,7 +56,7 @@ export default function Projects() {
           {projects.map((project, index) => (
             <div
               key={index}
-              className={`group relative overflow-hidden rounded-lg border border-border/30 bg-card/50 hover:bg-card/80 transition-all duration-500 transform ${
+              className={`group relative overflow-hidden rounded-lg border border-border/60 bg-card/50 hover:bg-card/80 hover:border-red-400/30 hover:shadow-lg hover:shadow-red-400/10 transition-all duration-500 transform ${
                 isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
               }`}
               style={{
@@ -69,7 +69,7 @@ export default function Projects() {
 
               <div className="relative p-8">
                 <h3 className="text-2xl font-bold mb-2">{project.title}</h3>
-                <p className="text-sm text-cyan-500 font-medium mb-4">{project.subtitle}</p>
+                <p className="text-sm text-red-400 font-medium mb-4">{project.subtitle}</p>
                 <p className="text-foreground/80 mb-6 leading-relaxed">{project.description}</p>
 
                 <div className="flex flex-wrap gap-2">
